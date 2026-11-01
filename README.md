@@ -42,7 +42,7 @@ echo 'GEMINI_API_KEY = "your-key"' > .streamlit/secrets.toml
 streamlit run app.py
 ```
 
-Optional: use a different model with `GEMINI_MODEL` (default `gemini-2.5-flash`).
+Optional: use a different model with `GEMINI_MODEL` (default `gemini-3.8-flash`).
 
 ## Push to GitHub
 
@@ -72,4 +72,4 @@ git push -u origin main
 ## Notes
 - Scanned (image-only) PDFs can't be read; neither can real ATS systems, so export a text-based PDF.
 - The ATS score is an AI estimate, not the output of any specific ATS product.
-- Uploaded resume text is sent to the Gemini API for analysis.# resume-checkers
+- Uploaded resume text is sent to the Gemini API for analysis.
