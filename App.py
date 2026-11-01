@@ -13,7 +13,7 @@ from google.genai import types
 from pydantic import BaseModel, Field
 from pypdf import PdfReader
 
-MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 MAX_CHARS = 20000  # keep prompts small and cheap
 MAX_FILE_MB = 5
 
@@ -103,7 +103,6 @@ def analyze_resume(api_key: str, resume_text: str, job_description: str) -> Resu
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=ResumeAnalysis,
-            temperature=0.3,
         ),
     )
     if isinstance(response.parsed, ResumeAnalysis):
